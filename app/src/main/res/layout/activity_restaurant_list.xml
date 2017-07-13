@@ -20,21 +20,21 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.constraint.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <xyz.aungpyaephyo.padc.restaurants.components.rvset.SmartRecyclerView
+            android:id="@+id/rv_restaurants"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay"
+            android:paddingBottom="90dp"
+            />
 
-    </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -42,8 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_search_24dp"
         android:tint="@color/white_full"
-        />
+        app:srcCompat="@drawable/ic_search_24dp" />
 
 </android.support.design.widget.CoordinatorLayout>

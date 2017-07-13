@@ -3,20 +3,31 @@ package xyz.aungpyaephyo.padc.restaurants.activities;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import xyz.aungpyaephyo.padc.restaurants.R;
+import xyz.aungpyaephyo.padc.restaurants.activities.base.BaseActivity;
+import xyz.aungpyaephyo.padc.restaurants.adapters.RestaurantListAdapter;
+import xyz.aungpyaephyo.padc.restaurants.components.rvset.SmartRecyclerView;
 
-public class RestaurantListActivity extends AppCompatActivity {
+public class RestaurantListActivity extends BaseActivity {
+
+    @BindView(R.id.rv_restaurants)
+    SmartRecyclerView rvRestaurants;
+
+    private RestaurantListAdapter mRestaurantListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_list);
+        ButterKnife.bind(this, this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -24,10 +35,13 @@ public class RestaurantListActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Search will come later", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
+
+        mRestaurantListAdapter = new RestaurantListAdapter(getApplicationContext());
+        rvRestaurants.setAdapter(mRestaurantListAdapter);
     }
 
     @Override

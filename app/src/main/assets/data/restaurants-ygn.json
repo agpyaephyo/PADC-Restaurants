@@ -1,0 +1,355 @@
+[
+  {
+    "title": "ကောင်းကြိုက်",
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Kaung%20KyiteKaung_Kyite.jpg",
+    "tags": [
+      "Indian",
+      "Vegetarian"
+    ],
+    "addr-short": "Tiong Bahru Plaza",
+    "total-rating-count": 135,
+    "average-rating-value": 4.5,
+    "is-ad": true,
+    "is-new": false,
+    "lead-time-in-min": 40
+  },
+  {
+    "title": "အမွတ္တရ",
+    "addr-short": "Star Vista",
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Inn%20Lay%20Ah%20Mat%20Ta%20YaAh-Mat_Ta_Ya.jpg",
+    "total-rating-count": 823,
+    "average-rating-value": 4.5,
+    "is-ad": true,
+    "is-new": false,
+    "tags": [
+      "Chinese",
+      "European",
+      "Myanmar",
+      "Vegetarian"
+    ],
+    "lead-time-in-min": 45
+  },
+  {
+    "title": "Jeff Kitchen",
+    "addr-short": "Dawson Koufu",
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Jeff's%20Kitchen%20(Thai%20Special)%20food2u.jpg",
+    "total-rating-count": 29,
+    "average-rating-value": 4.25,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "European",
+      "Thai"
+    ],
+    "lead-time-in-min": 30
+  },
+  {
+    "title": "I tea",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/I%20teai_tea.jpg",
+    "total-rating-count": 18,
+    "average-rating-value": 4.0,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Asian",
+      "Chinese",
+      "European",
+      "Japanese",
+      "Malaysia",
+      "Myanmar"
+    ],
+    "lead-time-in-min": 30
+  },
+  {
+    "title": "Thai Village",
+    "addr-short": "West",
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Thai%20Village1.jpg",
+    "total-rating-count": 177,
+    "average-rating-value": 4.25,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Thai"
+    ],
+    "lead-time-in-min": 30
+  },
+  {
+    "title": "The Manhattan FISH MARKET",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/The%20Manhattan%20FISH%20MARKET%20(Myanmar)the_mahattan_fish_market-logo.jpg",
+    "total-rating-count": 138,
+    "average-rating-value": 4.75,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Asian",
+      "European",
+      "Vegetarian"
+    ],
+    "lead-time-in-min": 35
+  },
+  {
+    "title": "ကွေ့သယို (တာမွား)",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Kuay%20TeawKuay_Teaw.jpg",
+    "total-rating-count": 33,
+    "average-rating-value": 4.25,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Thai",
+      "Vegetarian"
+    ],
+    "lead-time-in-min": 30
+  },
+  {
+    "title": "AGAPE",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/AGAPEAGAPE_Kachin_food.jpg",
+    "total-rating-count": 111,
+    "average-rating-value": 4.75,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Kachin",
+      "Myanmar",
+      "Vegetarian"
+    ],
+    "lead-time-in-min": 30
+  },
+  {
+    "title": "Aurora Floral Space",
+    "addr-short": "Anchorpoint",
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Aurora%20Floral%20SpaceAurora_Logo-resize.jpg",
+    "total-rating-count": 1,
+    "average-rating-value": 3.0,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Vegetarian"
+    ],
+    "lead-time-in-min": 30
+  },
+  {
+    "title": "HAPPY Cafe & Noodles",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/HAPPY%20Cafe'%20&%20Noodleshappy-cafe-noodles_formatted.jpg",
+    "total-rating-count": 120,
+    "average-rating-value": 4.25,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Chinese",
+      "European",
+      "Kachin",
+      "Korea",
+      "Myanmar",
+      "Shan"
+    ],
+    "lead-time-in-min": 45
+  },
+  {
+    "title": "ပါဖောင်ဆားအုံးငါးကင်",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Par%20Phongngar_kin.jpg",
+    "total-rating-count": 48,
+    "average-rating-value": 4.25,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Asian",
+      "Salad",
+      "Thai"
+    ],
+    "lead-time-in-min": 35
+  },
+  {
+    "title": "Bulgogi Brothers Myanmar",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Bulgogi%20Brothers%20Myanmar1214.jpg",
+    "total-rating-count": 27,
+    "average-rating-value": 4.25,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Korea",
+      "Salad"
+    ],
+    "lead-time-in-min": 40
+  },
+  {
+    "title": "ရွေင်္ဟသာတ",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Shaw%20Hin%20ThadaShwe_Hin_Tha_Da.jpg",
+    "total-rating-count": 14,
+    "average-rating-value": 4.25,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Chinese",
+      "Myanmar"
+    ],
+    "lead-time-in-min": 35
+  },
+  {
+    "title": "77 Cakes",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/77%20Cakes77_cakes_logo2.jpg",
+    "total-rating-count": 2,
+    "average-rating-value": 4.0,
+    "is-ad": false,
+    "is-new": true,
+    "tags": [
+      "European",
+      "Sandwich",
+      "Vegetarian"
+    ],
+    "lead-time-in-min": 45
+  },
+  {
+    "title": "Orzo Italian Restaurant",
+    "addr-short": "Dempsey",
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Sedona%20Pizza_Al_Quattro_Formaggi.jpg",
+    "total-rating-count": 71,
+    "average-rating-value": 4.0,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "European",
+      "Pizza"
+    ],
+    "lead-time-in-min": 50
+  },
+  {
+    "title": "ကဖေးထိုက်ကီ",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Cafe%20TykheCafe_Tykhe.jpg",
+    "total-rating-count": 2,
+    "average-rating-value": 3.0,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Burger",
+      "Thai"
+    ],
+    "lead-time-in-min": 40
+  },
+  {
+    "title": "Oishii Latha",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Oishiioishii_sushi_temp_logo.jpg",
+    "total-rating-count": 4,
+    "average-rating-value": 4.25,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Japanese",
+      "Korea"
+    ],
+    "lead-time-in-min": 30
+  },
+  {
+    "title": "အိုဆာကာ",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Osakaosaka.jpg",
+    "total-rating-count": 328,
+    "average-rating-value": 4.9,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Myanmar",
+      "Vegetarian"
+    ],
+    "lead-time-in-min": 45
+  },
+  {
+    "title": "Peperoni Pizzeria",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Peperoni%20PizzeriaFB_IMG_1435220705998.jpg",
+    "total-rating-count": 28,
+    "average-rating-value": 4.0,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "European",
+      "Vegetarian"
+    ],
+    "lead-time-in-min": 40
+  },
+  {
+    "title": "Secret Recipe",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Secret%20Recipesecret-recipe_logo.jpg",
+    "total-rating-count": 56,
+    "average-rating-value": 4.5,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Asian",
+      "European",
+      "Vegetarian"
+    ],
+    "lead-time-in-min": 30
+  },
+  {
+    "title": "Hot Stone Pizza",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Hot%20Stone%20PizzaHot_Stone_400_x_300.jpg",
+    "total-rating-count": 624,
+    "average-rating-value": 4.1,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "European"
+    ],
+    "lead-time-in-min": 35
+  },
+  {
+    "title": "Rotiboy",
+    "addr-short": "Dempsey",
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/%20Rotiboyroti_boy.jpg",
+    "total-rating-count": 28,
+    "average-rating-value": 4.1,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Asian",
+      "European",
+      "Malaysia",
+      "Vegetarian"
+    ],
+    "lead-time-in-min": 40
+  },
+  {
+    "title": "Marrybrown Myanmar",
+    "addr-short": null,
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Marrybrown%20MyanmarMB_logo_&_Font__Red.jpg",
+    "total-rating-count": 10,
+    "average-rating-value": 4.75,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Asian",
+      "Burger",
+      "Chinese",
+      "European",
+      "Myanmar"
+    ],
+    "lead-time-in-min": 40
+  },
+  {
+    "title": "ကြက်လျှာစွန်း (ဒံပေါက်)",
+    "addr-short": "Bukit Merah",
+    "image": "http://www.food2u.com.mm/Images/restaurantlogo/thumbs/Kyak%20Shar%20Son%20(Dan%20Pauk)Kyat_Shar_Sun.jpg",
+    "total-rating-count": 534,
+    "average-rating-value": 4.1,
+    "is-ad": false,
+    "is-new": false,
+    "tags": [
+      "Indian",
+      "Vegetarian"
+    ],
+    "lead-time-in-min": 40
+  }
+]

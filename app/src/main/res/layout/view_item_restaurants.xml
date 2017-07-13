@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_medium_2"
+    android:background="@drawable/bg_bottom_underline">
+
+    <ImageView
+        android:id="@+id/iv_restaurant"
+        android:layout_width="@dimen/restaurant_in_list_image"
+        android:layout_height="@dimen/restaurant_in_list_image"
+        android:src="@mipmap/padc_restaurant_icon_two_192"
+        />
+
+    <include
+        android:id="@+id/vp_rating_bar"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        layout="@layout/view_pod_rating_bar"
+        android:layout_toRightOf="@id/iv_restaurant"
+        android:layout_marginLeft="@dimen/margin_medium"
+        />
+
+    <xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yangon Tea-House"
+        android:layout_alignLeft="@id/vp_rating_bar"
+        android:layout_below="@id/vp_rating_bar"
+        android:layout_marginTop="@dimen/margin_medium_n"
+        android:layout_marginLeft="@dimen/margin_card_medium_2"
+        android:textSize="@dimen/text_regular_3x"
+        android:textColor="@color/primary_text"
+        />
+
+    <xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMTextView
+        android:id="@+id/tv_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Burgers, Chicken, Halal, Salads"
+        android:layout_alignLeft="@id/tv_title"
+        android:layout_below="@id/tv_title"
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/secondary_text"
+        />
+
+    <xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMTextView
+        android:id="@+id/tv_special_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ပြည်ပလာတာ"
+        android:layout_alignLeft="@id/tv_title"
+        android:layout_below="@id/tv_tags"
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/primary_text"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:drawableLeft="@drawable/restaurant_icon_128"
+        android:gravity="center_vertical"
+        android:drawablePadding="@dimen/margin_small"
+        android:drawableTint="@color/accent"
+        style="@style/WithBlackShadow"
+        />
+
+    <xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMTextView
+        android:id="@+id/lbl_travel_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="သွားမယ်ဆိုရင်"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_special_today"
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/primary_text"
+        />
+
+    <xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMTextView
+        android:id="@+id/tv_travel_time_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="မိနစ် ၂၀"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/lbl_travel_time"
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/primary_text"
+        android:drawableStart="@drawable/ic_directions_car_24dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="@dimen/margin_small"
+        android:drawableTint="@color/accent"
+        />
+
+    <xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMTextView
+        android:id="@+id/tv_travel_time_ybs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="၃၅ မိနစ်"
+        android:layout_toLeftOf="@id/tv_travel_time_car"
+        android:layout_alignBottom="@id/tv_travel_time_car"
+        android:layout_marginRight="@dimen/margin_card_medium_2"
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/primary_text"
+        android:drawableStart="@drawable/ic_directions_bus_24dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="@dimen/margin_small"
+        android:drawableTint="@color/accent"
+        />
+
+</RelativeLayout>
