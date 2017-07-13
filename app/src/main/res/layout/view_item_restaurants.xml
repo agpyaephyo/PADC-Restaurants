@@ -28,9 +28,9 @@
         android:text="Yangon Tea-House"
         android:layout_alignLeft="@id/vp_rating_bar"
         android:layout_below="@id/vp_rating_bar"
-        android:layout_marginTop="@dimen/margin_medium_n"
+        android:layout_marginTop="@dimen/margin_small_n"
         android:layout_marginLeft="@dimen/margin_card_medium_2"
-        android:textSize="@dimen/text_regular_3x"
+        android:textSize="18sp"
         android:textColor="@color/primary_text"
         />
 
@@ -46,7 +46,7 @@
         />
 
     <xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMTextView
-        android:id="@+id/tv_special_today"
+        android:id="@+id/tv_most_popular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ပြည်ပလာတာ"
@@ -54,7 +54,7 @@
         android:layout_below="@id/tv_tags"
         android:textSize="@dimen/text_regular"
         android:textColor="@color/primary_text"
-        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
         android:drawableLeft="@drawable/restaurant_icon_128"
         android:gravity="center_vertical"
         android:drawablePadding="@dimen/margin_small"
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:text="သွားမယ်ဆိုရင်"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/tv_special_today"
+        android:layout_below="@id/tv_most_popular"
         android:textSize="@dimen/text_regular"
         android:textColor="@color/primary_text"
         />
@@ -89,7 +89,7 @@
         />
 
     <xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMTextView
-        android:id="@+id/tv_travel_time_ybs"
+        android:id="@+id/tv_travel_time_bus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="၃၅ မိနစ်"

@@ -1,0 +1,349 @@
+[
+	{
+		"title" : "The Coffee Bean & Tea Leaf",
+		"addr-short" : "Tiong Bahru Plaza",
+		"image" : "",
+		"total-rating-count" : 135,
+		"average-rating-value" : 4.5,
+		"is-ad" : true,
+		"is-new" : false,
+		"tags" : [
+			"Halal",
+			"European"
+		],
+		"lead-time-in-min" : 40
+	},
+	{
+		"title" : "Nando's",
+		"addr-short" : "Star Vista",
+		"image" : "",
+		"total-rating-count" : 823,
+		"average-rating-value" : 4.5,
+		"is-ad" : true,
+		"is-new" : false,
+		"tags" : [
+			"Burgers",
+			"Chicken",
+			"Halal",
+			"Salads"
+		],
+		"lead-time-in-min" : 45
+	},
+	{
+		"title" : "Helen's Korean & Japanese",
+		"addr-short" : "Dawson Koufu",
+		"image" : "",
+		"total-rating-count" : 29,
+		"average-rating-value" : 4.25,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Japanese",
+			"Korean"
+		],
+		"lead-time-in-min" : 30
+	},
+	{
+		"title" : "JE Crab",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 18,
+		"average-rating-value" : 4.0,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Seafood",
+			"Chinese"
+		],
+		"lead-time-in-min" : 30
+	},
+	{
+		"title" : "Fook Seng Goldenhill Chicken Rice",
+		"addr-short" : "West",
+		"image" : "",
+		"total-rating-count" : 177,
+		"average-rating-value" : 4.25,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Chicken",
+			"Chinese"
+		],
+		"lead-time-in-min" : 30
+	},
+	{
+		"title" : "Soi Thai Soi Nice",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 138,
+		"average-rating-value" : 4.75,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Thai"
+		],
+		"lead-time-in-min" : 35
+	},
+	{
+		"title" : "Bap Korean Food",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 33,
+		"average-rating-value" : 4.25,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Korean"
+		],
+		"lead-time-in-min" : 30
+	},
+	{
+		"title" : "Bigbitez Express",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 111,
+		"average-rating-value" : 4.75,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Western"
+		],
+		"lead-time-in-min" : 30
+	},
+	{
+		"title" : "Jack's Place",
+		"addr-short" : "Anchorpoint",
+		"image" : "",
+		"total-rating-count" : 1,
+		"average-rating-value" : 3.0,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Meat",
+			"European"
+		],
+		"lead-time-in-min" : 30
+	},
+	{
+		"title" : "Ming En Sea Food",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 120,
+		"average-rating-value" : 4.25,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Seafood",
+			"Chinese"
+		],
+		"lead-time-in-min" : 45
+	},
+	{
+		"title" : "Jadecrab",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 48,
+		"average-rating-value" : 4.25,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Chinese",
+			"Seafood"
+		],
+		"lead-time-in-min" : 35
+	},
+	{
+		"title" : "Boufe Boutique Cafe",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 27,
+		"average-rating-value" : 4.25,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Western",
+			"Dessert",
+			"Bakery",
+			"Cakes"
+		],
+		"lead-time-in-min" : 40
+	},
+	{
+		"title" : "Big Charlie Grill",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 14,
+		"average-rating-value" : 4.25,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Burgers",
+			"Seafood",
+			"Singaporean",
+			"Western"
+		],
+		"lead-time-in-min" : 35
+	},
+	{
+		"title" : "The Pantry Social Enterprise Cafe",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 2,
+		"average-rating-value" : 4.0,
+		"is-ad" : false,
+		"is-new" : true,
+		"tags" : [
+			"Sandwiches",
+			"Italian",
+			"Western"
+		],
+		"lead-time-in-min" : 45
+	},
+	{
+		"title" : "Muthu's Curry",
+		"addr-short" : "Dempsey",
+		"image" : "",
+		"total-rating-count" : 71,
+		"average-rating-value" : 4.0,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Indian"
+		],
+		"lead-time-in-min" : 50
+	},
+	{
+		"title" : "Little House of Dreams",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 2,
+		"average-rating-value" : 3.0,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Vegetarian",
+			"American"
+		],
+		"lead-time-in-min" : 40
+	},
+	{
+		"title" : "Baker V",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 4,
+		"average-rating-value" : 4.25,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Dessert",
+			"Bakery",
+			"Cakes"
+		],
+		"lead-time-in-min" : 30
+	},
+	{
+		"title" : "Samy's Curry Restaurant",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 328,
+		"average-rating-value" : 4.9,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Seafood",
+			"Indian"
+		],
+		"lead-time-in-min" : 45
+	},
+	{
+		"title" : "Roadhouse",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 28,
+		"average-rating-value" : 4.0,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Burgers",
+			"Western",
+			"American"
+		],
+		"lead-time-in-min" : 40
+	},
+	{
+		"title" : "The Bakery Chef",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 56,
+		"average-rating-value" : 4.5,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Dessert",
+			"American",
+			"Bakery",
+			"Cakes"
+		],
+		"lead-time-in-min" : 30
+	},
+	{
+		"title" : "Brinda's",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 624,
+		"average-rating-value" : 4.1,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Indian",
+			"Vegetarian",
+			"Halal"
+		],
+		"lead-time-in-min" : 35
+	},
+	{
+		"title" : "The Wine Company",
+		"addr-short" : "Dempsey",
+		"image" : "",
+		"total-rating-count" : 28,
+		"average-rating-value" : 4.1,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"French",
+			"Italian",
+			"European"
+		],
+		"lead-time-in-min" : 40
+	},
+	{
+		"title" : "Pulse Patisserie",
+		"addr-short" : null,
+		"image" : "",
+		"total-rating-count" : 10,
+		"average-rating-value" : 4.75,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Bakery",
+			"Cakes",
+			"Dessert"
+		],
+		"lead-time-in-min" : 40
+	},
+	{
+		"title" : "Sarpino's",
+		"addr-short" : "Bukit Merah",
+		"image" : "",
+		"total-rating-count" : 534,
+		"average-rating-value" : 4.1,
+		"is-ad" : false,
+		"is-new" : false,
+		"tags" : [
+			"Halal",
+			"Italian",
+			"Pizza"
+		],
+		"lead-time-in-min" : 40
+	}
+]
