@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/bg_remove_side"
+        android:right="@dimen/bg_remove_side"
+        android:top="@dimen/bg_remove_side">
+        <shape android:shape="rectangle">
+
+            <stroke
+                android:width="@dimen/stroke_thin"
+                android:color="@color/bg_bottom_stroke" />
+
+            <solid android:color="@android:color/transparent" />
+
+            <padding
+                android:bottom="0dp"
+                android:left="0dp"
+                android:right="0dp"
+                android:top="0dp" />
+        </shape>
+    </item>
+</layer-list>

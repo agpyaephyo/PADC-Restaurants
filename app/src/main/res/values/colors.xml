@@ -10,4 +10,6 @@
     <color name="divider">#BDBDBD</color>
 
     <color name="white_full">#FFF</color>
+
+    <color name="bg_bottom_stroke">#CCC</color>
 </resources>
