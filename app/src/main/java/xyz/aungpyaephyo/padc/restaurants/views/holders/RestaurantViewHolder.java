@@ -1,8 +1,14 @@
 package xyz.aungpyaephyo.padc.restaurants.views.holders;
 
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import xyz.aungpyaephyo.padc.restaurants.data.vo.RestaurantVO;
+import com.bumptech.glide.Glide;
+
+import butterknife.BindView;
+import xyz.aungpyaephyo.padc.restaurants.R;
+import xyz.aungpyaephyo.padc.restaurants.data.vos.RestaurantVO;
 import xyz.aungpyaephyo.padc.restaurants.views.holders.base.BaseViewHolder;
 
 /**
@@ -11,13 +17,38 @@ import xyz.aungpyaephyo.padc.restaurants.views.holders.base.BaseViewHolder;
 
 public class RestaurantViewHolder extends BaseViewHolder<RestaurantVO> {
 
+    @BindView(R.id.iv_restaurant)
+    ImageView ivRestaurant;
+
+    @BindView(R.id.tv_title)
+    TextView tvTitle;
+
+    @BindView(R.id.tv_tags)
+    TextView tvTags;
+
+    @BindView(R.id.tv_most_popular)
+    TextView tvMostPopular;
+
+    @BindView(R.id.tv_travel_time_car)
+    TextView tvTravelTimeCar;
+
+    @BindView(R.id.tv_travel_time_bus)
+    TextView tvTravelTimeBus;
+
     public RestaurantViewHolder(View itemView) {
         super(itemView);
     }
 
     @Override
     public void bind(RestaurantVO data) {
-
+        tvTitle.setText(data.getTitle());
+        Glide.with(ivRestaurant.getContext())
+                .load(data.getImage())
+                .placeholder(R.mipmap.padc_restaurant_icon_two_192)
+                .error(R.mipmap.padc_restaurant_icon_two_192)
+                .into(ivRestaurant);
+        tvTags.setText(RestaurantVO.getTagsForDisplay(data));
+        tvMostPopular.setText(data.getMostPopular());
     }
 
     @Override

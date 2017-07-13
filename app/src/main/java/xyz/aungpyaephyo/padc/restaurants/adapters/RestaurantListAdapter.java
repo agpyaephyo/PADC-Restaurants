@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import xyz.aungpyaephyo.padc.restaurants.R;
-import xyz.aungpyaephyo.padc.restaurants.data.vo.RestaurantVO;
+import xyz.aungpyaephyo.padc.restaurants.data.vos.RestaurantVO;
 import xyz.aungpyaephyo.padc.restaurants.views.holders.RestaurantViewHolder;
 
 /**
@@ -26,11 +26,6 @@ public class RestaurantListAdapter extends BaseRecyclerAdapter<RestaurantViewHol
 
     @Override
     public void onBindViewHolder(RestaurantViewHolder holder, int position) {
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return 20;
+        holder.bind(mData.get(position));
     }
 }

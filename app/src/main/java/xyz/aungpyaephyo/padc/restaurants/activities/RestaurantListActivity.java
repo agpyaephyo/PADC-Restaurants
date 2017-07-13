@@ -10,10 +10,13 @@ import android.view.View;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import de.greenrobot.event.Subscribe;
+import de.greenrobot.event.ThreadMode;
 import xyz.aungpyaephyo.padc.restaurants.R;
 import xyz.aungpyaephyo.padc.restaurants.activities.base.BaseActivity;
 import xyz.aungpyaephyo.padc.restaurants.adapters.RestaurantListAdapter;
 import xyz.aungpyaephyo.padc.restaurants.components.rvset.SmartRecyclerView;
+import xyz.aungpyaephyo.padc.restaurants.events.DataEvents;
 
 public class RestaurantListActivity extends BaseActivity {
 
@@ -64,5 +67,10 @@ public class RestaurantListActivity extends BaseActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MainThread)
+    public void onRestaurantsLoaded(DataEvents.RestaurantListLoadedEvent event) {
+        mRestaurantListAdapter.setNewData(event.getRestaurantList());
     }
 }
