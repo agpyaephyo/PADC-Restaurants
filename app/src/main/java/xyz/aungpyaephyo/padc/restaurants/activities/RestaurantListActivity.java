@@ -7,7 +7,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,6 +14,8 @@ import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -46,12 +47,15 @@ public class RestaurantListActivity extends BaseActivity
 
     private RestaurantListAdapter mRestaurantListAdapter;
 
-    private RestaurantListPresenter mPresenter;
+    @Inject
+    RestaurantListPresenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_list);
+
+        ((RestaurantsApp) getApplication()).getAppComponent().inject(this);
         ButterKnife.bind(this, this);
 
         toolbar.setTitle(getString(R.string.restaurants_list));
@@ -78,7 +82,7 @@ public class RestaurantListActivity extends BaseActivity
                 .initLoader(RestaurantsConstants.RESTAURANT_LIST_LOADER,
                         null, this);
 
-        mPresenter = new RestaurantListPresenter(this);
+        mPresenter.setView(this);
     }
 
     @Override

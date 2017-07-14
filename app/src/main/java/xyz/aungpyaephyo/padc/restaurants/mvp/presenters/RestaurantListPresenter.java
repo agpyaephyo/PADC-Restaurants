@@ -10,13 +10,12 @@ import xyz.aungpyaephyo.padc.restaurants.mvp.views.RestaurantListView;
  * Created by aung on 7/14/17.
  */
 
-public class RestaurantListPresenter extends BasePresenter {
+public class RestaurantListPresenter extends BasePresenter<RestaurantListView> {
 
-    private RestaurantListView mView;
+    public RestaurantListPresenter() {
 
-    public RestaurantListPresenter(RestaurantListView view) {
-        this.mView = view;
     }
+
 
     @Override
     public void onStart() {

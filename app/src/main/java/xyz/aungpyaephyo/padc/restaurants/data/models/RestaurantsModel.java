@@ -21,18 +21,8 @@ import xyz.aungpyaephyo.padc.restaurants.persistence.RestaurantsContract;
 
 public class RestaurantsModel extends BaseModel {
 
-    private static RestaurantsModel objInstance;
-
-    private RestaurantsModel() {
-        super();
-    }
-
-    public static RestaurantsModel getInstance() {
-        if (objInstance == null) {
-            objInstance = new RestaurantsModel();
-        }
-
-        return objInstance;
+    public RestaurantsModel(Context context) {
+        super(context);
     }
 
     public void loadRestaurants(Context context) {

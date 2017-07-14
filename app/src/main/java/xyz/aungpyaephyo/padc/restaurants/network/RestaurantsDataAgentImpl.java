@@ -23,11 +23,9 @@ import xyz.aungpyaephyo.padc.restaurants.utils.RestaurantsConstants;
 
 public class RestaurantsDataAgentImpl implements RestaurantsDataAgent {
 
-    private static RestaurantsDataAgent objInstance;
-
     private final RestaurantsApi theApi;
 
-    private RestaurantsDataAgentImpl() {
+    public RestaurantsDataAgentImpl() {
         final OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(15, TimeUnit.SECONDS)
                 .writeTimeout(15, TimeUnit.SECONDS)
@@ -41,13 +39,6 @@ public class RestaurantsDataAgentImpl implements RestaurantsDataAgent {
                 .build();
 
         theApi = retrofit.create(RestaurantsApi.class);
-    }
-
-    public static RestaurantsDataAgent getInstance() {
-        if (objInstance == null) {
-            objInstance = new RestaurantsDataAgentImpl();
-        }
-        return objInstance;
     }
 
     @Override
