@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">PADC-Restaurants</string>
-    <string name="restaurants_list">Nearby Restaurants</string>
+    <string name="restaurants_list">အနီးအနားက စားသောက်ဆိုင်များ</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Content Description -->
+    <string name="content_description_empty_image">Image for empty data set</string>
+    <string name="content_description_empty_action">Action for empty data set</string>
+    <string name="content_description_empty_label">Label for empty data set</string>
+
+    <string name="msg_default_empty">သက်ဆိုင်ရာ data များ ပြရန် မရှိသေးပါ</string>
+    <string name="msg_empty_restaurant"><![CDATA[ဘယ်လိုနေရာမျိုးရောက်နေတာတုန်း<br />အနားမှ ဘာဆိုင်မှ မရှိဘူး]]></string>
 </resources>

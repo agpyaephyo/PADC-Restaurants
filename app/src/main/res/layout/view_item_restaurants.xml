@@ -30,7 +30,7 @@
         android:layout_below="@id/vp_rating_bar"
         android:layout_marginTop="@dimen/margin_small_n"
         android:layout_marginLeft="@dimen/margin_card_medium_2"
-        android:textSize="18sp"
+        android:textSize="@dimen/text_regular_title"
         android:textColor="@color/primary_text"
         />
 
