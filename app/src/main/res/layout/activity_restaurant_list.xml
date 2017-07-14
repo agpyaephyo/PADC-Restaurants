@@ -11,12 +11,14 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
+        <xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextAppearance="@style/ScreenTitle"
+            />
 
     </android.support.design.widget.AppBarLayout>
 
@@ -33,6 +35,12 @@
             android:scrollbarStyle="outsideOverlay"
             android:paddingBottom="90dp"
             />
+
+        <include
+            android:id="@+id/vp_empty_restaurant_list"
+            layout="@layout/view_pod_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </RelativeLayout>
 

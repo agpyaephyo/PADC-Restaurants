@@ -25,6 +25,7 @@
     <dimen name="text_small">12sp</dimen>
     <dimen name="text_regular">14sp</dimen>
     <dimen name="text_regular_2x">16sp</dimen>
+    <dimen name="text_regular_title">18sp</dimen>
     <dimen name="text_regular_3x">20sp</dimen>
     <dimen name="text_heading_1x">24sp</dimen>
     <dimen name="text_heading_2x">32sp</dimen>
@@ -39,4 +40,6 @@
 
     <dimen name="bg_remove_side">-4dp</dimen>
     <dimen name="stroke_thin">1dp</dimen>
+    <dimen name="bg_dialog_button_radius">4dp</dimen>
+    <dimen name="empty_favourite_text_padding">32dp</dimen>
 </resources>

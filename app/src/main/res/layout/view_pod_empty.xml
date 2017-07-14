@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xyz.aungpyaephyo.padc.restaurants.views.pods.EmptyViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMTextView
+        android:id="@+id/lbl_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingLeft="@dimen/empty_favourite_text_padding"
+        android:paddingRight="@dimen/empty_favourite_text_padding"
+        android:text="@string/msg_default_empty"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular"
+        android:contentDescription="@string/content_description_empty_label"
+        />
+
+    <ImageView
+        android:id="@+id/iv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lbl_empty"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:src="@drawable/empty_data_placeholder"
+        android:contentDescription="@string/content_description_empty_image"
+        />
+
+    <xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMButton
+        android:id="@+id/btn_action_for_empty"
+        style="@style/AccentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_empty"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:visibility="gone"
+        android:contentDescription="@string/content_description_empty_action"
+        />
+
+</xyz.aungpyaephyo.padc.restaurants.views.pods.EmptyViewPod>

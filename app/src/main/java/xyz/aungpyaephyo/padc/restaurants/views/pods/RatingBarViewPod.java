@@ -16,7 +16,7 @@ import xyz.aungpyaephyo.padc.restaurants.components.ratingloveanim.LoveAnimView;
  * Created by aung on 7/13/17.
  */
 
-public class ViewPodRatingBar extends LinearLayout {
+public class RatingBarViewPod extends LinearLayout {
 
     @BindView(R.id.iv_love_one)
     LoveAnimView ivLoveOne;
@@ -35,15 +35,15 @@ public class ViewPodRatingBar extends LinearLayout {
 
     private int mAppRating;
 
-    public ViewPodRatingBar(Context context) {
+    public RatingBarViewPod(Context context) {
         super(context);
     }
 
-    public ViewPodRatingBar(Context context, @Nullable AttributeSet attrs) {
+    public RatingBarViewPod(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public ViewPodRatingBar(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public RatingBarViewPod(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

@@ -22,18 +22,31 @@ import xyz.aungpyaephyo.padc.restaurants.R;
 import xyz.aungpyaephyo.padc.restaurants.RestaurantsApp;
 import xyz.aungpyaephyo.padc.restaurants.activities.base.BaseActivity;
 import xyz.aungpyaephyo.padc.restaurants.adapters.RestaurantListAdapter;
+import xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMToolbar;
 import xyz.aungpyaephyo.padc.restaurants.components.rvset.SmartRecyclerView;
 import xyz.aungpyaephyo.padc.restaurants.data.vos.RestaurantVO;
+import xyz.aungpyaephyo.padc.restaurants.mvp.presenters.RestaurantListPresenter;
+import xyz.aungpyaephyo.padc.restaurants.mvp.views.RestaurantListView;
 import xyz.aungpyaephyo.padc.restaurants.persistence.RestaurantsContract;
 import xyz.aungpyaephyo.padc.restaurants.utils.RestaurantsConstants;
+import xyz.aungpyaephyo.padc.restaurants.views.pods.EmptyViewPod;
 
 public class RestaurantListActivity extends BaseActivity
-        implements LoaderManager.LoaderCallbacks<Cursor> {
+        implements RestaurantListView,
+        LoaderManager.LoaderCallbacks<Cursor> {
 
     @BindView(R.id.rv_restaurants)
     SmartRecyclerView rvRestaurants;
 
+    @BindView(R.id.vp_empty_restaurant_list)
+    EmptyViewPod vpEmptyRestaurantList;
+
+    @BindView(R.id.toolbar)
+    MMToolbar toolbar;
+
     private RestaurantListAdapter mRestaurantListAdapter;
+
+    private RestaurantListPresenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +54,7 @@ public class RestaurantListActivity extends BaseActivity
         setContentView(R.layout.activity_restaurant_list);
         ButterKnife.bind(this, this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(getString(R.string.restaurants_list));
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -54,11 +67,18 @@ public class RestaurantListActivity extends BaseActivity
         });
 
         mRestaurantListAdapter = new RestaurantListAdapter(getApplicationContext());
+
+        vpEmptyRestaurantList.setEmptyLabel(getString(R.string.msg_empty_restaurant));
+        vpEmptyRestaurantList.setEmptyImage(R.drawable.empty_restaurant_list);
+
+        rvRestaurants.setEmptyView(vpEmptyRestaurantList);
         rvRestaurants.setAdapter(mRestaurantListAdapter);
 
         getSupportLoaderManager()
                 .initLoader(RestaurantsConstants.RESTAURANT_LIST_LOADER,
                         null, this);
+
+        mPresenter = new RestaurantListPresenter(this);
     }
 
     @Override
@@ -111,7 +131,7 @@ public class RestaurantListActivity extends BaseActivity
                 restaurantList.add(restaurant);
             } while (data.moveToNext());
 
-            bindData(restaurantList);
+            mPresenter.onRestaurantListLoaded(restaurantList);
         }
     }
 
@@ -120,8 +140,9 @@ public class RestaurantListActivity extends BaseActivity
 
     }
 
-    private void bindData(List<RestaurantVO> restaurantList) {
-        Log.d(RestaurantsApp.TAG, "Loaded Restaurants : " + restaurantList.size());
+    @Override
+    public void displayRestaurantList(List<RestaurantVO> restaurantList) {
+        Log.d(RestaurantsApp.TAG, "Displaying Restaurants : " + restaurantList.size());
         mRestaurantListAdapter.setNewData(restaurantList);
     }
 }
