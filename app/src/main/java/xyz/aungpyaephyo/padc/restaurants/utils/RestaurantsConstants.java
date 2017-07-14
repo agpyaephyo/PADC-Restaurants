@@ -10,4 +10,6 @@ public class RestaurantsConstants {
     public static final String API_GET_RESTAURANTS_V2 = "get-restaurants-v2.php";
 
     public static final int RESPONSE_CODE_OK = 200;
+
+    public static final int RESTAURANT_LIST_LOADER = 1;
 }

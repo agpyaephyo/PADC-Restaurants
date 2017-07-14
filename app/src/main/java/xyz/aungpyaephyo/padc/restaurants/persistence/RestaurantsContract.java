@@ -58,7 +58,7 @@ public class RestaurantsContract {
 
         public static final String TABLE_NAME = PATH_RESTAURANT_TAGS;
 
-        public static final String COLUMN_RESTAURANT_ID = "restaurant_id";
+        public static final String COLUMN_RESTAURANT_TITLE = "restaurant_title";
         public static final String COLUMN_TAG = "tag";
 
         public static Uri buildRestaurantTagUri(long id) {

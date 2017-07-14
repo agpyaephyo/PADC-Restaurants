@@ -12,14 +12,14 @@ import xyz.aungpyaephyo.padc.restaurants.persistence.RestaurantsContract.Restaur
 
 public class RestaurantsDBHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     public static final String DATABASE_NAME = "restaurants.db";
 
     private static final String SQL_CREATE_RESTAURANTS_TABLE = "CREATE TABLE " + RestaurantEntry.TABLE_NAME + " (" +
             RestaurantEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             RestaurantEntry.COLUMN_TITLE + " TEXT NOT NULL, " +
             RestaurantEntry.COLUMN_IMAGE + " TEXT NOT NULL, " +
-            RestaurantEntry.COLUMN_SHORT_ADDR + " TEXT NOT NULL, " +
+            RestaurantEntry.COLUMN_SHORT_ADDR + " TEXT NULL, " +
             RestaurantEntry.COLUMN_TOTAL_RATING_COUNT + " INTEGER NOT NULL, " +
             RestaurantEntry.COLUMN_AVERAGE_RATING_VALUE + " REAL NOT NULL, " +
             RestaurantEntry.COLUMN_IS_AD + " INTEGER NOT NULL, " +
@@ -32,10 +32,10 @@ public class RestaurantsDBHelper extends SQLiteOpenHelper {
 
     private static final String SQL_CREATE_RESTAURANT_TAG_TABLE = "CREATE TABLE " + RestaurantTagEntry.TABLE_NAME + " (" +
             RestaurantTagEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            RestaurantTagEntry.COLUMN_RESTAURANT_ID + " INTEGER NOT NULL, " +
+            RestaurantTagEntry.COLUMN_RESTAURANT_TITLE + " TEXT NOT NULL, " +
             RestaurantTagEntry.COLUMN_TAG + " TEXT NOT NULL, " +
 
-            " UNIQUE (" + RestaurantTagEntry.COLUMN_RESTAURANT_ID + ", " +
+            " UNIQUE (" + RestaurantTagEntry.COLUMN_RESTAURANT_TITLE + ", " +
             RestaurantTagEntry.COLUMN_TAG + ") ON CONFLICT IGNORE" +
             " );";
 
