@@ -10,6 +10,8 @@ import xyz.aungpyaephyo.padc.restaurants.data.models.RestaurantsModel;
 
 public class RestaurantsApp extends Application {
 
+    public static final String TAG = "RestaurantsApp";
+
     @Override
     public void onCreate() {
         super.onCreate();

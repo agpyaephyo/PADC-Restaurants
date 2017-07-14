@@ -10,6 +10,8 @@ import java.util.List;
 
 public class RestaurantVO {
 
+    private long _id;
+
     @SerializedName("title")
     private String title;
 
@@ -39,6 +41,10 @@ public class RestaurantVO {
 
     @SerializedName("most-popular")
     private String mostPopular;
+
+    public long getId() {
+        return _id;
+    }
 
     public String getTitle() {
         return title;
