@@ -1,24 +1,34 @@
 package xyz.aungpyaephyo.padc.restaurants.activities;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import de.greenrobot.event.Subscribe;
-import de.greenrobot.event.ThreadMode;
 import xyz.aungpyaephyo.padc.restaurants.R;
+import xyz.aungpyaephyo.padc.restaurants.RestaurantsApp;
 import xyz.aungpyaephyo.padc.restaurants.activities.base.BaseActivity;
 import xyz.aungpyaephyo.padc.restaurants.adapters.RestaurantListAdapter;
 import xyz.aungpyaephyo.padc.restaurants.components.rvset.SmartRecyclerView;
-import xyz.aungpyaephyo.padc.restaurants.events.DataEvents;
+import xyz.aungpyaephyo.padc.restaurants.data.vos.RestaurantVO;
+import xyz.aungpyaephyo.padc.restaurants.persistence.RestaurantsContract;
+import xyz.aungpyaephyo.padc.restaurants.utils.RestaurantsConstants;
 
-public class RestaurantListActivity extends BaseActivity {
+public class RestaurantListActivity extends BaseActivity
+        implements LoaderManager.LoaderCallbacks<Cursor> {
 
     @BindView(R.id.rv_restaurants)
     SmartRecyclerView rvRestaurants;
@@ -45,6 +55,10 @@ public class RestaurantListActivity extends BaseActivity {
 
         mRestaurantListAdapter = new RestaurantListAdapter(getApplicationContext());
         rvRestaurants.setAdapter(mRestaurantListAdapter);
+
+        getSupportLoaderManager()
+                .initLoader(RestaurantsConstants.RESTAURANT_LIST_LOADER,
+                        null, this);
     }
 
     @Override
@@ -69,8 +83,45 @@ public class RestaurantListActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Subscribe(threadMode = ThreadMode.MainThread)
-    public void onRestaurantsLoaded(DataEvents.RestaurantListLoadedEvent event) {
-        mRestaurantListAdapter.setNewData(event.getRestaurantList());
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
+        return new CursorLoader(this,
+                RestaurantsContract.RestaurantEntry.CONTENT_URI,
+                null,
+                null,
+                null,
+                null
+        );
+    }
+
+    @Override
+    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+        if (data != null && data.moveToFirst()) {
+            List<RestaurantVO> restaurantList = new ArrayList<>();
+            do {
+                RestaurantVO restaurant = RestaurantVO.parseFromCursor(data);
+
+                Cursor restaurantTagsCursor = getContentResolver().query(RestaurantsContract.RestaurantTagEntry.CONTENT_URI,
+                        null,
+                        RestaurantsContract.RestaurantTagEntry.COLUMN_RESTAURANT_TITLE + " = ?",
+                        new String[]{restaurant.getTitle()},
+                        null);
+
+                restaurant.setTagList(RestaurantVO.parseRestaurantTagsFromCursor(restaurantTagsCursor));
+                restaurantList.add(restaurant);
+            } while (data.moveToNext());
+
+            bindData(restaurantList);
+        }
+    }
+
+    @Override
+    public void onLoaderReset(Loader<Cursor> loader) {
+
+    }
+
+    private void bindData(List<RestaurantVO> restaurantList) {
+        Log.d(RestaurantsApp.TAG, "Loaded Restaurants : " + restaurantList.size());
+        mRestaurantListAdapter.setNewData(restaurantList);
     }
 }

@@ -1,5 +1,7 @@
 package xyz.aungpyaephyo.padc.restaurants.network;
 
+import android.content.Context;
+
 import com.google.gson.Gson;
 
 import java.util.concurrent.TimeUnit;
@@ -49,7 +51,7 @@ public class RestaurantsDataAgentImpl implements RestaurantsDataAgent {
     }
 
     @Override
-    public void loadRestaurants() {
+    public void loadRestaurants(final Context context) {
         Call<RestaurantListResponse> loadRestaurantsCall = theApi.getRestaurantList();
         loadRestaurantsCall.enqueue(new Callback<RestaurantListResponse>() {
             @Override
@@ -59,7 +61,7 @@ public class RestaurantsDataAgentImpl implements RestaurantsDataAgent {
                     EventBus.getDefault().post(new DataEvents.EmptyResponseBodyEvent());
                 } else {
                     if (restaurantListResponse.getCode() == RestaurantsConstants.RESPONSE_CODE_OK) {
-                        EventBus.getDefault().post(new DataEvents.RestaurantListLoadedEvent(restaurantListResponse.getRestaurantList()));
+                        EventBus.getDefault().post(new DataEvents.RestaurantListLoadedEvent(context, restaurantListResponse.getRestaurantList()));
                     } else {
                         EventBus.getDefault().post(new DataEvents.RequestErrorEvent(restaurantListResponse.getMessage()));
                     }

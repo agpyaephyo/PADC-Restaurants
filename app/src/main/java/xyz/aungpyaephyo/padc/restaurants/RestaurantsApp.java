@@ -3,6 +3,7 @@ package xyz.aungpyaephyo.padc.restaurants;
 import android.app.Application;
 
 import xyz.aungpyaephyo.padc.restaurants.data.models.RestaurantsModel;
+import xyz.aungpyaephyo.padc.restaurants.utils.NetworkUtils;
 
 /**
  * Created by aung on 7/13/17.
@@ -10,9 +11,13 @@ import xyz.aungpyaephyo.padc.restaurants.data.models.RestaurantsModel;
 
 public class RestaurantsApp extends Application {
 
+    public static final String TAG = "RestaurantsApp";
+
     @Override
     public void onCreate() {
         super.onCreate();
-        RestaurantsModel.getInstance().loadRestaurants();
+        if (NetworkUtils.isOnline(getApplicationContext())) {
+            RestaurantsModel.getInstance().loadRestaurants(getApplicationContext());
+        }
     }
 }

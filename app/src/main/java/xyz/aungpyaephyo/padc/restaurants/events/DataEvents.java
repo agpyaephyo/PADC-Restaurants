@@ -1,5 +1,7 @@
 package xyz.aungpyaephyo.padc.restaurants.events;
 
+import android.content.Context;
+
 import java.util.List;
 
 import xyz.aungpyaephyo.padc.restaurants.data.vos.RestaurantVO;
@@ -27,14 +29,20 @@ public class DataEvents {
     }
 
     public static class RestaurantListLoadedEvent {
+        private Context context;
         private List<RestaurantVO> restaurantList;
 
-        public RestaurantListLoadedEvent(List<RestaurantVO> restaurantList) {
+        public RestaurantListLoadedEvent(Context context, List<RestaurantVO> restaurantList) {
+            this.context = context;
             this.restaurantList = restaurantList;
         }
 
         public List<RestaurantVO> getRestaurantList() {
             return restaurantList;
+        }
+
+        public Context getContext() {
+            return context;
         }
     }
 }
