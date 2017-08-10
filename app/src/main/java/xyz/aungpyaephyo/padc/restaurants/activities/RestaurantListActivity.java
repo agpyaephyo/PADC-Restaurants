@@ -13,8 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import org.reactivestreams.Subscription;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,8 +21,6 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
@@ -94,6 +90,8 @@ public class RestaurantListActivity extends BaseActivity
                         null, this);
 
         mPresenter.setView(this);
+
+        helloRxJava("the", "real", "PADC", ":", "Android", "Developer", "Course");
     }
 
     @Override
@@ -165,5 +163,30 @@ public class RestaurantListActivity extends BaseActivity
     public void onTapRestaurantItem(RestaurantVO restaurant) {
         Intent intent = RestaurantDetailsActivity.newIntent(getApplicationContext(), restaurant);
         startActivity(intent);
+    }
+
+    private void helloRxJava(String... names) {
+        Observable<String> nameObservable = Observable.fromArray(names);
+        nameObservable.subscribe(new Observer<String>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NonNull String name) {
+                Log.d(RestaurantsApp.TAG, "Rx : \"" + name + "\"" + " has " + name.length() + " characters.");
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
     }
 }
