@@ -1,5 +1,6 @@
 package xyz.aungpyaephyo.padc.restaurants.activities;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import org.reactivestreams.Subscription;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +22,12 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.Observer;
+import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.Disposable;
 import xyz.aungpyaephyo.padc.restaurants.R;
 import xyz.aungpyaephyo.padc.restaurants.RestaurantsApp;
 import xyz.aungpyaephyo.padc.restaurants.activities.base.BaseActivity;
@@ -26,6 +35,7 @@ import xyz.aungpyaephyo.padc.restaurants.adapters.RestaurantListAdapter;
 import xyz.aungpyaephyo.padc.restaurants.components.mmfont.MMToolbar;
 import xyz.aungpyaephyo.padc.restaurants.components.rvset.SmartRecyclerView;
 import xyz.aungpyaephyo.padc.restaurants.data.vos.RestaurantVO;
+import xyz.aungpyaephyo.padc.restaurants.delegates.RestaurantViewHolderDelegate;
 import xyz.aungpyaephyo.padc.restaurants.mvp.presenters.RestaurantListPresenter;
 import xyz.aungpyaephyo.padc.restaurants.mvp.views.RestaurantListView;
 import xyz.aungpyaephyo.padc.restaurants.persistence.RestaurantsContract;
@@ -34,6 +44,7 @@ import xyz.aungpyaephyo.padc.restaurants.views.pods.EmptyViewPod;
 
 public class RestaurantListActivity extends BaseActivity
         implements RestaurantListView,
+        RestaurantViewHolderDelegate,
         LoaderManager.LoaderCallbacks<Cursor> {
 
     @BindView(R.id.rv_restaurants)
@@ -70,7 +81,7 @@ public class RestaurantListActivity extends BaseActivity
             }
         });
 
-        mRestaurantListAdapter = new RestaurantListAdapter(getApplicationContext());
+        mRestaurantListAdapter = new RestaurantListAdapter(getApplicationContext(), this);
 
         vpEmptyRestaurantList.setEmptyLabel(getString(R.string.msg_empty_restaurant));
         vpEmptyRestaurantList.setEmptyImage(R.drawable.empty_restaurant_list);
@@ -148,5 +159,11 @@ public class RestaurantListActivity extends BaseActivity
     public void displayRestaurantList(List<RestaurantVO> restaurantList) {
         Log.d(RestaurantsApp.TAG, "Displaying Restaurants : " + restaurantList.size());
         mRestaurantListAdapter.setNewData(restaurantList);
+    }
+
+    @Override
+    public void onTapRestaurantItem(RestaurantVO restaurant) {
+        Intent intent = RestaurantDetailsActivity.newIntent(getApplicationContext(), restaurant);
+        startActivity(intent);
     }
 }

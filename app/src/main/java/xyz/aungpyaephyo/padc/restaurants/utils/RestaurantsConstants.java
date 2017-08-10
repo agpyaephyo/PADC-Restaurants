@@ -12,4 +12,5 @@ public class RestaurantsConstants {
     public static final int RESPONSE_CODE_OK = 200;
 
     public static final int RESTAURANT_LIST_LOADER = 1;
+    public static final int RESTAURANT_DETAILS_LOADER = 2;
 }

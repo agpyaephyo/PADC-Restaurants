@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide;
 import butterknife.BindView;
 import xyz.aungpyaephyo.padc.restaurants.R;
 import xyz.aungpyaephyo.padc.restaurants.data.vos.RestaurantVO;
+import xyz.aungpyaephyo.padc.restaurants.delegates.RestaurantViewHolderDelegate;
 import xyz.aungpyaephyo.padc.restaurants.views.holders.base.BaseViewHolder;
 
 /**
@@ -35,12 +36,18 @@ public class RestaurantViewHolder extends BaseViewHolder<RestaurantVO> {
     @BindView(R.id.tv_travel_time_bus)
     TextView tvTravelTimeBus;
 
-    public RestaurantViewHolder(View itemView) {
+    private RestaurantViewHolderDelegate mDelegate;
+
+    private RestaurantVO mData;
+
+    public RestaurantViewHolder(View itemView, RestaurantViewHolderDelegate delegate) {
         super(itemView);
+        mDelegate = delegate;
     }
 
     @Override
     public void bind(RestaurantVO data) {
+        mData = data;
         tvTitle.setText(data.getTitle());
         Glide.with(ivRestaurant.getContext())
                 .load(data.getImage())
@@ -53,6 +60,6 @@ public class RestaurantViewHolder extends BaseViewHolder<RestaurantVO> {
 
     @Override
     public void onClick(View v) {
-
+        mDelegate.onTapRestaurantItem(mData);
     }
 }

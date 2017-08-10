@@ -29,6 +29,12 @@
             android:exported="false"
             android:syncable="true" />
 
+        <activity
+            android:name=".activities.RestaurantDetailsActivity"
+            android:label="@string/title_activity_restaurant_details"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

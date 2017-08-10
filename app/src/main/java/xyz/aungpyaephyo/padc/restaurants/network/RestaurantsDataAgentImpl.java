@@ -2,6 +2,7 @@ package xyz.aungpyaephyo.padc.restaurants.network;
 
 import android.content.Context;
 
+import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.google.gson.Gson;
 
 import java.util.concurrent.TimeUnit;
@@ -30,6 +31,7 @@ public class RestaurantsDataAgentImpl implements RestaurantsDataAgent {
                 .connectTimeout(15, TimeUnit.SECONDS)
                 .writeTimeout(15, TimeUnit.SECONDS)
                 .readTimeout(60, TimeUnit.SECONDS)
+                .addNetworkInterceptor(new StethoInterceptor())
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()

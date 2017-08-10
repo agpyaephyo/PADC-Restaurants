@@ -27,7 +27,7 @@
         android:layout_above="@id/lbl_empty"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/margin_medium_2"
-        android:src="@drawable/empty_data_placeholder"
+        android:src="@drawable/placeholder_empty_data"
         android:contentDescription="@string/content_description_empty_image"
         />
 

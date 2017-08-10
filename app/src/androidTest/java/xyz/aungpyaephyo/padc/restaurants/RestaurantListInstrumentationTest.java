@@ -33,7 +33,8 @@ public class RestaurantListInstrumentationTest {
         onView(withId(R.id.fab)).perform(click());
         //onView(withText("Submit")).perform(click());
 
-        onView(allOf(withId(android.support.design.R.id.snackbar_text), withText("Search will come later2")))
+        onView(allOf(withId(android.support.design.R.id.snackbar_text),
+                withText("Search will come later2")))
                 .check(matches(isDisplayed()));
     }
 }

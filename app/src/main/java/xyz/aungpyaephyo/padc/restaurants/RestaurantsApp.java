@@ -2,6 +2,8 @@ package xyz.aungpyaephyo.padc.restaurants;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
+
 import javax.inject.Inject;
 
 import xyz.aungpyaephyo.padc.restaurants.dagger.AppComponent;
@@ -26,11 +28,13 @@ public class RestaurantsApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Stetho.initializeWithDefaults(this);
+
         mAppComponent = initDagger(this);
 
         getAppComponent().inject(this);
         if (NetworkUtils.isOnline(getApplicationContext())) {
-            mRestaurantModel.loadRestaurants(getApplicationContext());
+            //mRestaurantModel.loadRestaurants(getApplicationContext());
         }
     }
 

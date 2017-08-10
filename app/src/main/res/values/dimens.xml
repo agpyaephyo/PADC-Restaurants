@@ -42,4 +42,7 @@
     <dimen name="stroke_thin">1dp</dimen>
     <dimen name="bg_dialog_button_radius">4dp</dimen>
     <dimen name="empty_favourite_text_padding">32dp</dimen>
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="width_meal_in_restaurant">180dp</dimen>
+    <dimen name="height_meal_in_restaurant">120dp</dimen>
 </resources>
